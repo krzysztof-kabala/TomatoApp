@@ -4,7 +4,6 @@ import as.tomatoapp.helper.DataTimeToTimestampSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.joda.time.DateTime;
 
-import java.sql.Timestamp;
 import java.util.UUID;
 
 public class Sale {

@@ -8,6 +8,7 @@ import java.util.Random;
 public class NumericUtil {
     /**
      * generate random integer from min to max
+     *
      * @param min int minimum value (included)
      * @param max int maximum value (included)
      * @return int
@@ -25,6 +26,6 @@ public class NumericUtil {
 
         long up_excluded = (max - min) - 1L;
 
-        return (long)(random.nextDouble()*up_excluded + min);
+        return (long) (random.nextDouble() * up_excluded + min);
     }
 }

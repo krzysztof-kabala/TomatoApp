@@ -5,6 +5,7 @@ import as.tomatoapp.util.NumericUtil;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -24,9 +25,9 @@ public class SaleProvider {
     public List<Sale> createSales(Integer howMany) {
         List<Sale> sales = new ArrayList<>();
 
-        int maxSales = (howMany>0) ? howMany : 0;
+        int maxSales = (howMany > 0) ? howMany : 0;
 
-        for (int i=0;i<maxSales;i++) {
+        for (int i = 0; i < maxSales; i++) {
             sales.add(this.createSale());
         }
 

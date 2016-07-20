@@ -17,7 +17,7 @@ public class DataTimeToTimestampSerializer extends JsonSerializer<DateTime> {
             JsonGenerator jsonGenerator,
             SerializerProvider serializerProvider
     ) throws IOException, JsonProcessingException {
-        Timestamp timestamp = new Timestamp(dateTime.getMillis()/1000L);
+        Timestamp timestamp = new Timestamp(dateTime.getMillis() / 1000L);
 
         jsonGenerator.writeObject(timestamp.getTime());
     }

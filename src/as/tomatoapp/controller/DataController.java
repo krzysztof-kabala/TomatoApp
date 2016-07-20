@@ -31,7 +31,7 @@ public class DataController {
 
     @RequestMapping(value = "data", method = {RequestMethod.GET, RequestMethod.POST})
     public String dataAction(
-        @RequestParam(required = false, defaultValue = "3") Integer size
+            @RequestParam(required = false, defaultValue = "3") Integer size
     ) throws JsonProcessingException {
         List<Sale> sales = this.saleProvider.createSales(size);
 
