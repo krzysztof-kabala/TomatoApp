@@ -21,10 +21,17 @@ public class NumericUtil {
         return random.nextInt(up_excluded) + min;
     }
 
+    /**
+     * generate random long from min to max
+     *
+     * @param min long minimum value (included)
+     * @param max long maximum value (included)
+     * @return long
+     */
     public long randomLong(long min, long max) {
         Random random = new Random();
 
-        long up_excluded = (max - min) - 1L;
+        long up_excluded = (max - min);
 
         return (long) (random.nextDouble() * up_excluded + min);
     }
