@@ -17,7 +17,7 @@ public class SaleProvider {
     private NumericUtil numericUtil;
 
     /**
-     * generate list of Sale objects
+     * generate list of Sale objects, then order by timestamp
      *
      * @param howMany Integer
      * @return List<Sale>
@@ -30,6 +30,10 @@ public class SaleProvider {
         for (int i = 0; i < maxSales; i++) {
             sales.add(this.createSale());
         }
+
+        sales.sort(
+            (left, right) -> left.getTimestamp().compareTo(right.getTimestamp())
+        );
 
         return sales;
     }
